@@ -1,5 +1,5 @@
 # Command-Line-Contact-Manager-Practice-Project
-A simple command-line contact management system written in Python. It allows users to add, view, search, and delete contacts, with data saved to a JSON file.
+A simple command-line contact management system written in Python. It allows users to add, view, search, and delete contacts, with data saved to a JSON file.	
 
 ## Features
 - Add new contacts (name, phone, email)
@@ -20,7 +20,7 @@ python main.py
 ```md
 ## Project Structure
 
-contact_manager/
+Command-Line-Contact-Manager-Practice-Project/
 │
 ├── main.py # Main application file
 |── ...   # Main application file revision (s)
