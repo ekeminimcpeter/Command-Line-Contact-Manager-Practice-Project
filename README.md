@@ -17,7 +17,6 @@ A simple command-line contact management system written in Python. It allows use
 ```bash
 python main.py
 
-
 ## Project Structure
 
 Command-Line-Contact-Manager-Practice-Project/
