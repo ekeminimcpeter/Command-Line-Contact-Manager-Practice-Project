@@ -65,8 +65,6 @@ def search_contact(contacts):
 #Function to delete contacts from list
 def delete_contact(contacts):
     view_contacts(contacts)
-    if not contacts:
-        return
 
     try:
         index = int(input("Enter contact number to delete: "))
