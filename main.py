@@ -15,16 +15,12 @@ def load_contacts():
 
 #Function to save contacts to file at exit
 def save_contacts(contacts):
-
-    print(contacts)
     
     with open(FILENAME, "w") as f:
         json.dump(contacts, f, indent=4)
 
 #Function to update contact list
 def add_contact(contacts):
-
-    print(contacts)
     
     name = input("Enter name: ").strip()
     phone = input("Enter phone: ").strip()
@@ -45,13 +41,15 @@ def view_contacts(contacts):
     if not contacts:
         print("No contacts found.")
         return
-
-    for i, contact in enumerate(contacts, start=1):
+    
+    #Update contact list ID (index/counter) and contact and print ID-tagged Item list.
+    
+    for i, contact in enumerate(contacts, start=1):  #start counter variable at 1.
         print(f"{i}. {contact['name']} - {contact['phone']} - {contact['email']}")
 
 #Function to search for contacts in list
 def search_contact(contacts):
-    keyword = input("Enter name or phone to search: ").strip().lower()
+    keyword = input("Enter name or phone to search: ").strip().lower() #Remove leading and trailing whitespaces and normalise string to lowercase.
 
     found = False
     for contact in contacts:
@@ -87,7 +85,7 @@ def main():
         print("4. Delete contact")
         print("5. Exit")
 
-        choice = input("Choose an option: ").strip()
+        choice = input("Choose an option: ").strip() #Remove leading and trailing whitespaces 
 
         if choice == "1":
             add_contact(contacts)
@@ -98,6 +96,8 @@ def main():
         elif choice == "4":
             delete_contact(contacts)
         elif choice == "5":
+            
+            #Save to contact list and exit. No changes to contact list file if not saved.
             save_contacts(contacts)
             print("Contacts saved. Goodbye.")
             break
