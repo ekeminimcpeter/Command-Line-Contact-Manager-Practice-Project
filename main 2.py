@@ -109,29 +109,30 @@ def main():
                     print("Do you want to end the program without saving?")
                     print("1. Save and exit")
                     print("2. Exit without saving")
+                    print("3. Cancel")
 
-                    confirm = input("Enter 1 or 2 (or yes/no or y/n): ").strip().lower() # get user confirmation input.
+                    confirm = input("Enter 1 or 2 or 3 (or yes/no/cancel): ").strip().lower() # get user confirmation input.
 
-                    if confirm in ("1", "yes", "y"):
+                    if confirm in ("1", "yes"):
                         save_contacts(contacts)
                         print("Contacts saved. Goodbye.")
-                        break
+                        exit() # terminate program immediately
 
-                    elif confirm in ("2", "no", "n"):
+                    elif confirm in ("2", "no"):
                         print("Exiting without saving. Goodbye.")
-                        break
+                        exit() # terminate program immediately
+
+                    elif confirm in ("3", "cancel"):
+                        print("Exit cancelled. Returning to menu.")
+                        break  # break only inner loop → go back to menu
 
                     else:
-                        print("Invalid choice. Please enter 1 or 2, yes or no, y or n.")
-
-                break  # exit main loop after confirmation
+                        print("Invalid choice. Please enter 1 or 2 or 3, yes or no or cancel.")
 
         else:
             # Nothing changed or nothing to save
             print("Goodbye.")
-
-            break # exit main loop
-
+            
 if __name__ == "__main__":
     main()
 
