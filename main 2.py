@@ -14,7 +14,7 @@ def load_contacts():
         return json.load(f)
 
 #Function to save contacts to file at exit
-def save_contacts(contacts):
+def save_contacts(contacts): 
     
     with open(FILENAME, "w") as f:
         json.dump(contacts, f, indent=4)

@@ -128,7 +128,9 @@ def main():
 
                     else:
                         print("Invalid choice. Please enter 1 or 2 or 3, yes or no or cancel.")
-
+            else:
+                print("Goodbye")
+                return # leave main() cleanly
         else:
             # Nothing changed or nothing to save
             print("Goodbye.")

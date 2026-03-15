@@ -96,7 +96,7 @@ def main():
                 
         elif choice == "3":
             search_contact(contacts) # viewing does not change data
-                
+
         elif choice == "4":
             delete_contact(contacts)
             saved = False # mark data as unsaved when modified

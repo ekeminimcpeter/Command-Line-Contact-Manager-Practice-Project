@@ -86,7 +86,7 @@ def main():
         print("5. Exit")
 
         choice = input("Choose an option: ").strip() #Remove leading and trailing whitespaces 
-
+        
         if choice == "1":
             add_contact(contacts)
         elif choice == "2":
